@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth Lesson</title>
+    <style>
+        .profile-row {
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            width: 350px;  
+            border: 1px solid #eeeeee;
+            padding: 10px;
+        }
+
+        .avatar-lg {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .details-col {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .name-bold {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .desc-sub {
+            font-size: 14px;
+            color: gray;
+            margin: 2px 0;
+        }
+
+        .btn-follow {
+            background-color: #00a2ed;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .video-item {
+            display: flex; 
+            align-items: flex-start; 
+            font-family: Arial, sans-serif;
+            width: 500px; 
+            padding: 20px;
+        }
+
+        .thumb {
+            width: 200px; 
+            height: 110px; 
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .vid-info {
+            display: flex;
+            flex-direction: column; 
+            flex: 1; 
+        }
+
+        .title-dark {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 4px 0; 
+        }
+
+        .stats-light {
+            font-size: 12px;
+            color: gray;
+            margin: 2px 0;
+        }
+
+        .friend-card {
+            width: 200px;
+            display: inline-block;
+            align-items: center;
+            margin-right: 10px;
+            box-shadow: 0px 0px 1px 0px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .card-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 10px 12px 15px 12px;
+        }
+
+        .card-name {
+            font-weight: bold;
+            font-size: 25px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .mutual-wrap {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .mutual-icon {
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .mutual-count {
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            color: gray;
+            margin: 0;
+            margin-right: 5px;
+        }
+
+        .btn-add {
+            font-family: arial;
+            background-color: #00a2ed;
+            color: white;
+            height: 35px;
+            width: 90px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-row">
+        <img src="meong-garong.png" class="avatar-lg">
+        <div class="details-col">
+            <p class="name-bold">Oliver</p>
+            <p class="desc-sub">The cat</p>
+            <p class="desc-sub">Popular</p>
+        </div>
+        <button class="btn-follow">Follow</button>
+    </div>
+
+    <br>
+
+    <div class="profile-row">
+        <img src="meong-garong.png" class="avatar-lg">
+        <div class="details-col">
+            <p class="name-bold">Oliver</p>
+            <p class="desc-sub">The cat</p>
+            <p class="desc-sub">Popular</p>
+        </div>
+        <button class="btn-follow">Follow</button>
+    </div>
+
+    <div class="profile-row">
+        <img src="koceng-oren.png" class="avatar-lg">
+        <div class="details-col">
+            <p class="name-bold">Mimi</p>
+            <p class="desc-sub">Sleepy cat</p>
+            <p class="desc-sub">Popular</p>
+        </div>
+        <button class="btn-follow">Follow</button>
+    </div>
+
+    <div class="profile-row">
+        <img src="gukguk-lucu.png" class="avatar-lg">
+        <div class="details-col">
+            <p class="name-bold">Rex</p>
+            <p class="desc-sub">Happy bulldog</p>
+            <p class="desc-sub">Popular</p>
+        </div>
+        <button class="btn-follow">Follow</button>
+    </div>
+
+    <br><br><hr>
+
+    <div class="video-item">
+        <img src="topi-ngotak.png" class="thumb">
+        <div class="vid-info">
+            <p class="title-dark">How to compete against CS</p>
+            <p class="title-dark">degrees (as a self-taught dev)</p>
+            <p class="stats-light">SuperSimpleDev</p>
+            <p class="stats-light">1.5K views • 4 months ago</p>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <img src="grafik-bikin-pusing.png" class="thumb">
+        <div class="vid-info">
+            <p class="title-dark">Which programming language</p>
+            <p class="title-dark">to learn first 2022 (with charts)</p>
+            <p class="stats-light">SuperSimpleDev</p>
+            <p class="stats-light">5.7K views • 11 months ago</p>
+        </div>
+    </div>
+
+    <div class="video-item">
+        <img src="gambar-codingan.png" class="thumb">
+        <div class="vid-info">
+            <p class="title-dark">Frontend web development - a</p>
+            <p class="title-dark">complete overview (2021)</p>
+            <p class="stats-light">SuperSimpleDev</p>
+            <p class="stats-light">1K views • 4 months ago</p>
+        </div>
+    </div>
+
+    <br><br><hr>
+
+    <div class="friend-card">
+        <img src="meong-garong.png" class="card-img">
+        <div class="card-body">
+            <span class="card-name">Alek</span>
+            <div class="mutual-wrap">
+                <img class="mutual-icon" src="anying.png">
+                <span class="mutual-count">2 Mutual Friends</span>
+            </div>
+            <button class="btn-add">Add Friend</button>
+        </div>
+    </div>
+
+    <div class="friend-card">
+        <img src="koceng-oren.png" class="card-img">
+        <div class="card-body">
+            <span class="card-name">Bombom</span>
+            <div class="mutual-wrap">
+                <img class="mutual-icon" src="anying.png">
+                <span class="mutual-count">3 Mutual Friends</span>
+            </div>
+            <button class="btn-add">Add Friend</button>
+        </div>
+    </div>
+
+    <div class="friend-card">
+        <img src="gukguk-lucu.png" class="card-img">
+        <div class="card-body">
+            <span class="card-name">Dogpi</span>
+            <div class="mutual-wrap">
+                <img class="mutual-icon" src="anying.png">
+                <span class="mutual-count">4 Mutual Friends</span>
+            </div>
+            <button class="btn-add">Add Friend</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

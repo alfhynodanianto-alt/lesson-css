@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 14 - Position Fixed</title>
+  <style>
+    body {
+      height: 3000px;
+      font-family: Arial;
+      margin: 0;
+    }
+
+    /* 14a */
+    .box-pinned {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: black;
+      color: white;
+      padding: 10px;
+    }
+
+    /* 14b */
+    .panel-right {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      background: green;
+      color: white;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    /* 14c */
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* 14d (modal) */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dialog-box {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    /* 14e (header) */
+    .top-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .header-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .btn-action {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: blue;
+      color: white;
+    }
+
+    /* 14f (discord sidebar) */
+    .side-nav-primary {
+      position: fixed;
+      left: 0;
+      top: 60px;
+      bottom: 0;
+      width: 60px;
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+    }
+
+    .side-nav-primary img {
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    .side-nav-secondary {
+      position: fixed;
+      left: 60px;
+      top: 60px;
+      bottom: 0;
+      width: 150px;
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 14e HEADER -->
+  <div class="top-header">
+    <div class="header-group">
+      <img src="meong-garong.png" class="user-pic">
+      <div>Oliver Cat</div>
+    </div>
+
+    <div>
+      <button class="btn-action btn-primary">Add Friend</button>
+      <button class="btn-action">Message</button>
+    </div>
+  </div>
+
+  <!-- 14f SIDEBAR -->
+  <div class="side-nav-primary">
+    <img src="meong-garong.png">
+    <img src="koceng-oren.png">
+    <img src="gukguk-lucu.png">
+  </div>
+
+  <div class="side-nav-secondary">
+    <div><b>INFO</b></div>
+    <div># new-videos</div>
+    <div># updates</div>
+    <div># faq</div>
+  </div>
+
+  <!-- 14b RIGHT SIDEBAR -->
+  <div class="panel-right">right sidebar</div>
+
+  <!-- 14a FIXED BOX -->
+  <div class="box-pinned">bottom-right</div>
+
+  <!-- 14d MODAL -->
+    <div class="modal-backdrop" id="modalBackdrop">
+    <div class="dialog-box">
+      <h3>Modal Title</h3>
+      <p>This is a modal</p>
+      <button id="dismissBtn">Close</button>
+    </div>
+  </div>
+
+  <script>
+  const backdrop = document.getElementById("modalBackdrop");
+  const dismissBtn = document.getElementById("dismissBtn");
+
+  dismissBtn.addEventListener("click", () => {
+    backdrop.style.display = "none";
+  });
+</script>
+</body>
+</html>
+
+

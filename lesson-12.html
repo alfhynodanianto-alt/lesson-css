@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 12 - Flexbox Layouts</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .wrapper {
+      margin-bottom: 30px;
+    }
+
+    .base-box {
+      background-color: lightblue;
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* 12a */
+    .flex-layout-alpha {
+      display: flex;
+    }
+
+    .block-200 {
+      width: 200px;
+      background-color: lightblue;
+    }
+
+    .block-75 {
+      width: 75px;
+      background-color: pink;
+    }
+
+    /* 12b */
+    .flex-layout-beta {
+      display: flex;
+    }
+
+    .block-50 {
+      width: 50px;
+      background-color: lightblue;
+    }
+
+    .block-fluid {
+      flex: 1;
+      background-color: lightgray;
+    }
+
+    .block-75-alt {
+      width: 75px;
+      background-color: lightpink;
+    }
+
+    /* 12c */
+    .flex-layout-gamma {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* 12d */
+    .flex-layout-delta {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid gray;
+      height: 50px;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    /* 12e */
+    .panel-card {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .panel-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+    }
+
+    .badge-notif {
+      background-color: blue;
+      color: white;
+      border-radius: 50px;
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    /* 12f */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6f4bb8;
+      padding: 10px;
+      color: white;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 5px;
+      border-radius: 20px;
+      border: none;
+    }
+
+    .action-btn {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+  </style>
+</head>
+<body>
+
+<br>
+<h1>12a</h1>
+  <div class="wrapper flex-layout-alpha">
+    <div class="block-200 base-box">200px</div>
+    <div class="block-75 base-box">75px</div>
+  </div>
+
+<br>
+<h1>12b</h1>
+  <div class="wrapper flex-layout-beta">
+    <div class="block-50 base-box">item1</div>
+    <div class="block-fluid base-box">item2</div>
+    <div class="block-75-alt base-box">item3</div>
+  </div>
+
+<br>
+<h1>12c</h1>
+    <div class="wrapper flex-layout-gamma">
+    <div class="base-box">item1</div>
+    <div class="base-box">item2</div>
+    <div class="base-box">item3</div>
+    <div class="base-box">item4</div>
+  </div>
+
+<br>
+<h1>12d</h1>
+    <div class="wrapper flex-layout-delta">
+    <div class="base-box">item1</div>
+    <div class="base-box">item2</div>
+  </div>
+
+<br>
+<h1>12e</h1>
+    <div class="wrapper panel-card">
+    <div class="panel-row">
+      <span>Home</span>
+      <span class="badge-notif">14</span>
+    </div>
+    <div class="panel-row">
+      <span>Notifications</span>
+      <span class="badge-notif">3</span>
+    </div>
+    <div class="panel-row">
+      <span>Messages</span>
+      <span class="badge-notif">5</span>
+    </div>
+  </div>
+
+<br>
+<h1>12f</h1>  
+    <div class="wrapper top-nav">
+    <div>Home</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+    </div>
+    <button class="action-btn">Download</button>
+  </div>
+
+</body>
+</html>
+
+

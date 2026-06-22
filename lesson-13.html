@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 13 - Nested Flexbox</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+
+    .content-area {
+      margin-bottom: 40px;
+    }
+
+    .generic-box {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* 13a */
+    .nested-flex-a {
+      display: flex;
+    }
+
+    .side-left-a {
+      width: 100px;
+      background: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .side-right-a {
+      width: 200px;
+      background: lightblue;
+    }
+
+    /* 13b */
+    .nested-flex-b {
+      display: flex;
+    }
+
+    .side-left-b {
+      width: 100px;
+      background: pink;
+    }
+
+    .side-right-b {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      background: lightblue;
+    }
+
+    .bottom-row-b {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Gmail (13c–13e) */
+    .message-thread {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .user-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .msg-body {
+      flex: 1;
+    }
+
+    .msg-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .msg-preview {
+      color: gray;
+      font-size: 13px;
+    }
+
+    /* Twitter (13f–13g) */
+    .social-post {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .post-text {
+      flex: 1;
+    }
+
+    .post-author {
+      display: flex;
+      gap: 5px;
+      font-weight: bold;
+    }
+
+    .handle {
+      color: gray;
+      font-weight: normal;
+    }
+
+    .attached-link {
+      display: flex;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .thumb-img {
+      width: 100px;
+      background: gray;
+    }
+
+    .link-details {
+      padding: 5px;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+<body>
+
+ <br>
+ <h1>13a</h1>
+  <div class="content-area">
+    <h3>13a</h3>
+    <div class="nested-flex-a">
+      <div class="side-left-a">
+        <div class="generic-box">item1</div>
+      </div>
+      <div class="side-right-a"></div>
+    </div>
+  </div>
+
+  <br>
+  <h1>13b</h1>
+  <div class="content-area">
+    <h3>13b</h3>
+    <div class="nested-flex-b">
+      <div class="side-left-b"></div>
+
+      <div class="side-right-b">
+        <div class="generic-box">row1</div>
+        <div class="bottom-row-b">
+          <div class="generic-box">row2</div>
+          <div class="generic-box">row2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<h1>13c–13e</h1>
+  <div class="content-area">
+    <h3>13c–13e (Email Layout)</h3>
+
+    <div class="message-thread">
+      <img src="meong-garong.png" class="user-icon">
+      <div class="msg-body">
+        <div class="msg-header">
+          <span>Chewy Promotions</span>
+          <span>4:58 PM</span>
+        </div>
+        <div><b>Biggest sales of the year!</b></div>
+        <div class="msg-preview">Hey there! We're writing to tell you about our latest deals...</div>
+      </div>
+    </div>
+
+    <div class="message-thread">
+      <img src="gukguk-lucu.png" class="user-icon">
+      <div class="msg-body">
+        <div class="msg-header">
+          <span>Best Buy</span>
+          <span>12:32 PM</span>
+        </div>
+        <div><b>Your Best Buy Receipt</b></div>
+        <div class="msg-preview">Thank you for shopping at Best Buy...</div>
+      </div>
+    </div>
+
+    <div class="message-thread">
+      <img src="koceng-oren.png" class="user-icon">
+      <div class="msg-body">
+        <div class="msg-header">
+          <span>Netflix</span>
+          <span>12:32 PM</span>
+        </div>
+        <div><b>Your Best Buy Receipt</b></div>
+        <div class="msg-preview">Brand new movies and shows, old favorites...</div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<h1>13f–13g</h1>
+  <div class="content-area">
+    <h3>13f–13g (Social Layout)</h3>
+
+    <div class="social-post">
+      <img src="meong-garong.png" class="user-icon">
+
+      <div class="post-text">
+        <div class="post-author">
+          <span>supersimple.dev</span>
+          <span class="handle">@SuperSimpleDev</span>
+        </div>
+
+        <div>
+          What is backend web development? A complete overview.
+        </div>
+
+        <div class="attached-link">
+          <div class="thumb-img"></div>
+          <div class="link-details">
+            <div>youtube.com</div>
+            <div><b>Backend web development - a complete overview</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+
